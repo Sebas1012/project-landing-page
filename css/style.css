@@ -80,7 +80,7 @@ header a{
 /*Inicio Content*/
 .main{
     max-width: 100%;
-    height: 755px;
+    min-height: 755px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,11 +126,13 @@ header a{
 
 .button-repo:hover{
     background-color: rgba(55,58,54, 0.5);
+    cursor: pointer;
     
 }
 
 .button-download:hover{
     background-color: rgba(55,58,54, 0.5);
+    cursor: pointer;
     
 }
 
@@ -159,6 +161,7 @@ header a{
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    margin-bottom: 120px;
 }
 
 .card-m{
@@ -167,16 +170,82 @@ header a{
     padding: 20px 10px 0px 20px;
 }
 
-.card-m img{
+.icon-card-m{
     border-radius: 50%;
     margin-bottom: 15px;
+    background-color: rgba(55,58,54, 0.5);
+    width: 50px;
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
 }
+
+.icon-card-m span:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 .card-m p{
     text-align: left;
     font-size: 15px;
+    line-height: 1.7;
+}
+
+.stats{
+    width: 60%;
+    height: 35%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stats-card{
+    width: 20%;
+    height: 100%;
+    padding: 20px 10px 0px 20px;
+    text-align: left;
+    
+    
+}
+
+.stats-card h3{
+    line-height: 1.9;
+    font-size: 28px;
+}
+
+.stats-card span{
+    color: var(--font-color-second);
 }
 
 /*Fin Content*/
 
+@media only screen and (max-width: 800px){
+    .mini-cards{
+        flex-direction: column;
+        height: 30%;
+    }
+
+    .card-m{
+        width: 95%;
+        height: 30%;
+        padding: 40px 10px 0px 20px;
+    }
+
+    .stats{
+        width: 80%;
+    }
+
+    .stats-card{
+        width: 40%;
+    }
+
+    .stats-card h3 span{
+        padding-right: 20px;
+    }
+}
 
